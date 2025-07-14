@@ -201,7 +201,7 @@ delayMicroseconds(3);
 // CH1 = 0x00 (normal electrode input), CH2-CH8 = 0x05 (test signal)
 for (int i = 0; i < 8; i++) {
   if (i == 0) {
-    spiWrite(0b00000000);  // CH1: gain=24, ingresso normale
+    spiWrite(0b01100000);  // CH1: gain=24, ingresso normale
   } else {
     spiWrite(0x81);  // CH2–CH8: ingresso corto (disattivati)
   }
